@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ubuntu_for_c_compiler:
+    build: .
+    volumes:
+      - ".:/app"
+    tty: true
+    stdin_open: true
