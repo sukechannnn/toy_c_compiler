@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 int main() {
-  char c = 'a';
-  char *point = &c;
+  char c[] = "aaa";
+  char *point = c;
 
-  *point = 'b';
-  printf("%c\n", c);
+  point[1] = 'b';
+  printf("%s\n", c);
+  printf("%c\n", point[0]);
 
   return 0;
 }
