@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 int main() {
-  char c[] = "aaa";
-  char *point = c;
+  char *s_ary[] = {"aaa", "bbb", "ccc", NULL};
+  char **s_pointer = s_ary;
 
-  point[1] = 'b';
-  printf("%s\n", c);
-  printf("%c\n", point[0]);
+  while (*s_pointer != NULL) {
+    printf("%s\n", *s_pointer);
+    ++s_pointer;
+  }
 
   return 0;
 }
